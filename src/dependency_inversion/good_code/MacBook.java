@@ -4,14 +4,14 @@ import dependency_inversion.bad_code.KeyBoard;
 import dependency_inversion.bad_code.Mouse;
 
 public class MacBook {
-    // concrete class. this is wrong. This should be an interface.
+    // Note: This is now an interface.
     private final KeyBoard keyboard;
 
-    // concrete class. this is wrong. This should be an interface.
+    // Note: This is now an interface.
     private final Mouse mouse;
 
     public MacBook(KeyBoard keyboard, Mouse mouse) {
-        this.keyboard = keyboard;
+        this.keyboard = keyboard; // We can pass any type of Keyboard object which impements 'keyboard' interface.
         this.mouse = mouse;
     }
 
